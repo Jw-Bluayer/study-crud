@@ -1,0 +1,14 @@
+<h1> INDEX </h1>
+	<% @post.each do |p| %>
+		<h3> id : <%= p.id %> </h3> 
+		title : <%= p.title %>
+		content : <%= p.content %>
+		<%= link_to '보기', "/home/#{p.id}" %>
+		<%= link_to '수정하기', "/home/#{p.id}/edit" %>
+		<%= link_to '삭제하기', "/home/#{p.id}", method: :delete %>
+		<br>
+	<% end %>
+<br>
+<hr>
+<br>
+<%= link_to '새로 작성', "/home/new" %>
